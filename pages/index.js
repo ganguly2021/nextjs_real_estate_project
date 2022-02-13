@@ -2,6 +2,7 @@ import { Flex, Box } from "@chakra-ui/react";
 import styles from "./../styles/Home.module.css";
 
 import Banner from "./../components/Banner";
+import { baseUrl, fetchApi } from './../utils/fetchApi';
 
 export default function Home() {
   return (
@@ -31,3 +32,4 @@ export default function Home() {
     </Box>
   );
 }
+
