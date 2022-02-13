@@ -2,9 +2,11 @@ import { Flex, Box } from "@chakra-ui/react";
 import styles from "./../styles/Home.module.css";
 
 import Banner from "./../components/Banner";
-import { baseUrl, fetchApi } from './../utils/fetchApi';
+import { baseUrl, fetchApi } from "./../utils/fetchApi";
 
-export default function Home() {
+export default function Home({ propertiesForRent, propertiesForSale }) {
+  console.log(propertiesForRent);
+  console.log(propertiesForSale);
   return (
     <Box className={styles.container}>
       <Banner
@@ -33,3 +35,17 @@ export default function Home() {
   );
 }
 
+export async function getStaticProps() {
+  const urlForSale = `${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-sale&hitsPerPage=6`;
+  const urlForRent = `${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-rent&hitsPerPage=6`;
+
+  const propertyForSale = await fetchApi(urlForSale);
+  const propertyForRent = await fetchApi(urlForRent);
+
+  return {
+    props: {
+      propertiesForSale: propertyForSale?.hits,
+      propertiesForRent: propertyForRent?.hits,
+    },
+  };
+}

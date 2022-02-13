@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // base url
-export const baseUrl = "bayut.p.rapidapi.com";
+export const baseUrl = "https://bayut.p.rapidapi.com";
 
 // api headers
 const headers = {
@@ -13,4 +13,6 @@ export const fetchApi = async (url) => {
   const { data } = await axios.get(url, {
     headers: headers,
   });
+
+  return data;
 };
