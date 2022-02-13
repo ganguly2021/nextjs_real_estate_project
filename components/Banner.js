@@ -15,7 +15,7 @@ function Banner({
 }) {
   return (
     <Flex flexWrap="wrap" justifyContent="center" alignItems="center" m="10">
-      <Image src={imageUrl} width={500} height={500} alt="banner" />
+      <Image src={imageUrl} width={500} height={300} alt="banner" />
       <Box p="5">
         <Text color="gray.500" fontWeight="medium" fontSize="sm">
           {purpose}
