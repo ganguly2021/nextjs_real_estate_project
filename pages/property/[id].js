@@ -6,6 +6,7 @@ import { BsGridFill } from "react-icons/bs";
 import { GoVerified } from "react-icons/go";
 import millify from "millify";
 import { baseUrl, fetchApi } from "./../../utils/fetchApi";
+import ImageScrollBar from "../../components/ImageScrollBar";
 
 function PropertyDetailPage({
   propertyDetail: {
@@ -22,12 +23,14 @@ function PropertyDetailPage({
     purpose,
     furnishingStatus,
     amenities,
-    photos
+    photos,
   },
 }) {
-  return <Box maxWidth="1000px" margin="auto" p="4">
-    {photos && <ImageScrollBar photos={photos} />}
-  </Box>;
+  return (
+    <Box maxWidth="1000px" margin="auto" p="4">
+      {photos && <ImageScrollBar data={photos} />}
+    </Box>
+  );
 }
 
 export default PropertyDetailPage;
