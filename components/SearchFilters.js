@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Flex,
   Select,
@@ -16,6 +15,9 @@ import { MdCancel } from "react-icons/md";
 import Image from "next/image";
 
 function SearchFilters() {
+  const [filters, setFilters] = useState({});
+
+
   return <div>SearchFilters</div>;
 }
 
