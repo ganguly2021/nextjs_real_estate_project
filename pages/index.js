@@ -1,5 +1,4 @@
 import { Flex, Box } from "@chakra-ui/react";
-import styles from "./../styles/Home.module.css";
 
 import Banner from "./../components/Banner";
 import Property from '../components/Property'
@@ -9,7 +8,7 @@ export default function Home({ propertiesForRent, propertiesForSale }) {
   console.log(propertiesForRent);
   console.log(propertiesForSale);
   return (
-    <Box className={styles.container}>
+    <Box>
       <Banner
         purpose="RENT A HOME"
         title1="Rental Homes for"
