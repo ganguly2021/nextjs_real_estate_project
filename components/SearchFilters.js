@@ -42,7 +42,7 @@ function SearchFilters() {
             }
           >
             {filter?.items?.map((item) => (
-              <option value={item.value}>{item.name}</option>
+              <option value={item.value} key={item.name}>{item.name}</option>
             ))}
           </Select>
         </Box>

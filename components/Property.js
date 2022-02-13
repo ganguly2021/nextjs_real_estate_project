@@ -38,6 +38,7 @@ function Property({
             src={coverPhoto ? coverPhoto.url : defaultImage}
             width={400}
             height={260}
+            alt="cover photo"
           />
         </Box>
         <Box w="full">
