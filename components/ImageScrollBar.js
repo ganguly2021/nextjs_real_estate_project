@@ -5,7 +5,7 @@ import { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu";
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 
 const LeftArrow = () => {
-  const { isFirstItemVisible, scrollPrev } = useContext(VisibilityContext);
+  const { scrollPrev } = useContext(VisibilityContext);
 
   return (
     <Flex justifyContent="center" alignItems="center" marginRight="1">
@@ -21,7 +21,7 @@ const LeftArrow = () => {
 };
 
 const RightArrow = () => {
-  const { isLastItemVisible, scrollNext } = useContext(VisibilityContext);
+  const { scrollNext } = useContext(VisibilityContext);
 
   return (
     <Flex justifyContent="center" alignItems="center" marginRight="1">
